@@ -1,0 +1,67 @@
+digraph G
+{
+"INICIO"[label = "Inicio", style = filled, fillcolor="#0D5A73", fontcolor="#A2E7FF", shape=box]
+"INICIO" -> "ny2"
+"ny2"[label = "y2", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"ny2" -> "ny4"[rankdir=UD];
+"ny4" -> "ny2"
+"ny2,1,x5"[label = "1", style = filled, fillcolor="#5C5C5A", fontcolor="#FCFC29", shape=circle]
+"ny2" -> "ny2,1,x5"[constraint=false];
+"ny2,1,x5" -> "ny2"[constraint=false];
+{rank=same; "ny2"  "ny2,1,x5"}
+{rank=same; "ny2,1,x5"  "ny2"}
+"ny4"[label = "y4", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"ny4" -> "ny5"[rankdir=UD];
+"ny5" -> "ny4"
+"ny4,1,x2"[label = "1", style = filled, fillcolor="#5C5C5A", fontcolor="#FCFC29", shape=circle]
+"ny4" -> "ny4,1,x2"[constraint=false];
+"ny4,1,x2" -> "ny4"[constraint=false];
+{rank=same; "ny4"  "ny4,1,x2"}
+{rank=same; "ny4,1,x2"  "ny4"}
+"ny5"[label = "y5", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"ny5" -> "ny7"[rankdir=UD];
+"ny7" -> "ny5"
+"ny5,1,x3"[label = "1", style = filled, fillcolor="#5C5C5A", fontcolor="#FCFC29", shape=circle]
+"ny5" -> "ny5,1,x3"[constraint=false];
+"ny5,1,x3" -> "ny5"[constraint=false];
+{rank=same; "ny5"  "ny5,1,x3"}
+{rank=same; "ny5,1,x3"  "ny5"}
+"ny7"[label = "y7", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"ny7,1,x1"[label = "1", style = filled, fillcolor="#5C5C5A", fontcolor="#FCFC29", shape=circle]
+"ny7" -> "ny7,1,x1"[constraint=false];
+"ny7,1,x1" -> "ny7"[constraint=false];
+{rank=same; "ny7"  "ny7,1,x1"}
+{rank=same; "ny7,1,x1"  "ny7"}
+"INICIO" -> "nx1"
+{rank=same; "INICIO"  "nx1"}
+"nx1"[label = "x1", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"nx1" -> "nx2"
+"nx2" -> "nx1"
+{rank=same; "nx1"  "nx2"}
+{rank=same; "nx2"  "nx1"}
+"nx1" -> "ny7,1,x1"[rankdir=UD];
+"ny7,1,x1" -> "nx1"
+"nx2"[label = "x2", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"nx2" -> "nx3"
+"nx3" -> "nx2"
+{rank=same; "nx2"  "nx3"}
+{rank=same; "nx3"  "nx2"}
+"nx2" -> "ny4,1,x2"[rankdir=UD];
+"ny4,1,x2" -> "nx2"
+"nx3"[label = "x3", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"nx3" -> "nx5"
+"nx5" -> "nx3"
+{rank=same; "nx3"  "nx5"}
+{rank=same; "nx5"  "nx3"}
+"nx3" -> "ny5,1,x3"[rankdir=UD];
+"ny5,1,x3" -> "nx3"
+"nx5"[label = "x5", style = filled, fillcolor="#E1E16E", fontcolor="#040404", shape=box]
+"nx5" -> "ny2,1,x5"[rankdir=UD];
+"ny2,1,x5" -> "nx5"
+subgraph cluster_0 {
+style=filled;
+color=grey;
+node [style=filled,color=white];
+label = "PROFUNDIDAD";
+}
+}

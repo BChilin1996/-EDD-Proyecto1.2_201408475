@@ -1,0 +1,18 @@
+Digraph G {
+node[shape=record]
+nodrafa[label="<f0>|<f1> rafa|<f2>"]
+nodbryand[label="<f0>|<f1> bryand|<f2>"]
+nodantonio[label="<f0>|<f1> antonio|<f2>"]
+noda1ma[label="<f0>|<f1> a1ma|<f2>"]
+nodjose[label="<f0>|<f1> jose|<f2>"]
+nodpopo[label="<f0>|<f1> popo|<f2>"]
+nodr2d2[label="<f0>|<f1> r2d2|<f2>"]
+nodzamba[label="<f0>|<f1> zamba|<f2>"]
+nodrafa: f0 -> nodbryand
+nodrafa: f2 -> nodzamba
+nodbryand: f0 -> nodantonio
+nodbryand: f2 -> nodjose
+nodantonio: f0 -> noda1ma
+nodjose: f2 -> nodpopo
+nodpopo: f2 -> nodr2d2
+}
